@@ -1,0 +1,45 @@
+<header>
+  <nav>
+    <div class="nav-wrapper amber">
+      <div class="row">
+        <div class="col s12">
+          <a [routerLink]="['/']" class="brand-logo">Painel</a>
+          <ul id="nav-mobile" class="right">
+            <li><a [routerLink]="['/']">Sass</a></li>
+            <li><a [routerLink]="['/']">Components</a></li>
+            <li><a data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a><img class="circle" src="images/yuna.jpg"></a>
+      <a><span class="white-text name">John Doe</span></a>
+      <a><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li [routerLinkActive]="[active]"><a [routerLink]="['/dashboard']"><i class="material-icons">dashboard</i>Painel</a></li>
+    <li [routerLinkActive]="[active]"><a [routerLink]="['/edit']"><i class="material-icons">edit_location</i>Dados</a></li>
+    <li [routerLinkActive]="[active]"><a [routerLink]="['/dishes']"><i class="material-icons">apps</i>Pratos</a></li>
+    <li><div class="divider"></div></li>
+    <li [routerLinkActive]="[active]"><a class="subheader">Minha conta</a></li>
+    <li [routerLinkActive]="[active]"><a [routerLink]="['/profile']"><i class="material-icons">account_circle</i>Editar meus dados</a></li>
+    <li><a [routerLink]="['/password']"><i class="material-icons">security</i>Trocar senha</a></li>
+    <li><a><i class="material-icons">cancel</i>sair</a></li>
+
+  </ul>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer class="page-footer amber lighten-3">
+  <div class="footer-copyright">
+    <div class="container deep-orange-text">
+      © 2019 Copyright Text
+    </div>
+  </div>
+</footer>
